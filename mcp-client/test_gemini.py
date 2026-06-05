@@ -59,7 +59,9 @@ if not result["implemented"]:
 
         print("\n[INFO] Starting GitHub workflow...")
 
-        branch_name = f"ai/dbt-update-{int(time.time())}"
+        branch_name = (
+            f"ai/{result['target_model']}-{int(time.time())}"
+        )
 
         create_branch(branch_name)
 
