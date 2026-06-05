@@ -92,12 +92,7 @@ def create_pull_request(
         headers=headers
     )
 
-    print("Status:", response.status_code)
-    print("Response:", response.text)
-
     if response.status_code in [200, 201]:
-        print("[GITHUB] PR created successfully")
-        print(response.json())
         return response.json()
 
     return None

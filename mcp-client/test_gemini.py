@@ -74,10 +74,10 @@ if not result["implemented"]:
             title="AI: Automated dbt model update",
             body="Generated via MCP + Gemini pipeline"
         )
-        print("PR OBJECT:", pr)
-        print("\n========== FINAL RESULT ==========")
+
+        print("\n========== FINAL RESULT PR Created ==========")
         print("Branch:", branch_name)
-        print("PR:", pr["html_url"] if pr else "FAILED")
+
 
     elif outcome["status"] == "dbt_run_failed":
         print(" SQL replaced")
