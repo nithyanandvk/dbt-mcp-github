@@ -1,0 +1,54 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Virtual Environment
+.venv/
+venv/
+env/
+
+# Environment Variables
+.env
+
+# IDE
+.vscode/
+.idea/
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Python Build
+build/
+dist/
+*.egg-info/
+
+# dbt Artifacts
+dbt_project/target/
+dbt_project/logs/
+
+# Secrets
+secrets.json
+credentials.json
+service_account.json
+
+# Gemini / OpenAI Keys
+*.key
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Coverage
+.coverage
+htmlcov/
+
+# Temporary files
+tmp/
+temp/
+*.tmp

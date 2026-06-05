@@ -1,0 +1,15 @@
+gross_revenue:
+  definition: quantity * unit_price
+  source_model: int_orders_enriched
+
+total_refund:
+  definition: sum(refunded_amount)
+  source_model: int_refunds
+
+net_revenue:
+  definition: total_revenue - total_refund
+  source_model: customer_revenue
+
+avg_order_value:
+  definition: total_revenue / total_orders
+  source_model: customer_revenue
