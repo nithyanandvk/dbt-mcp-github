@@ -27,7 +27,7 @@ def get_context(user_request: str):
 def apply_ai_change(model_name: str, new_sql: str):
     try:
         response = requests.post(
-            "http://localhost:8000/dbt/patch",
+            "http://localhost:8000/apply-ai-change",
             json={
                 "model_name": model_name,
                 "new_sql": new_sql
