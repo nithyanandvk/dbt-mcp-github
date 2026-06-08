@@ -30,7 +30,7 @@ def apply_ai_change(model_name: str, new_sql: str):
             "http://localhost:8000/apply-ai-change",
             json={
                 "model_name": model_name,
-                "new_sql": new_sql
+                "sql": new_sql
             },
             timeout=60
         )
