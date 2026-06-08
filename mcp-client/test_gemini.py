@@ -11,7 +11,11 @@ from github_client import (
 )
 import time
 
-context = get_context("add average refund per order")
+user_request = input(
+    "\nEnter DBT Change Request: "
+)
+
+context = get_context(user_request)
 
 prompt = build_prompt(context)
 
