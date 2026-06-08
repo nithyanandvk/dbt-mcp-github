@@ -20,6 +20,12 @@ def run_dbt(command="run"):
             text=True
         )
 
+        print("\n========== DBT STDOUT ==========")
+        print(process.stdout)
+
+        print("\n========== DBT STDERR ==========")
+        print(process.stderr)
+
         return {
             "command": " ".join(cmd),
             "return_code": process.returncode,
