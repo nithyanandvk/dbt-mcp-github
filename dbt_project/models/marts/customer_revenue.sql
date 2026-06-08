@@ -16,7 +16,9 @@ SELECT
 
     COUNT(DISTINCT o.order_id) AS total_orders,
 
-    (SUM(o.gross_revenue) / COUNT(DISTINCT o.order_id)) AS avg_order_value
+    (SUM(o.gross_revenue) / COUNT(DISTINCT o.order_id)) AS avg_order_value,
+
+    (COALESCE(SUM(r.total_refund), 0) / COUNT(DISTINCT o.order_id)) AS avg_refund_per_order
 
 FROM orders o
 LEFT JOIN refunds r
